@@ -45,7 +45,7 @@ int main() {
     //going trough 4 cases
     if (choice == 1) {
         exit(1);
-    } else if (choice == 2) {
+    } else if (choice == 3) {
         char itempath[70] = " ";
         sprintf(itempath, ".\\%s\\content", name);
         CreateDirectory(itempath, NULL);
@@ -62,10 +62,12 @@ int main() {
         CreateDirectory(gfxpath, NULL);
         sprintf(gfxpath, ".\\%s\\resources\\gfx", name);
         CreateDirectory(gfxpath, NULL);
-        sprintf(gfxpath, ".\\%s\\resources\\gfx\\collectibles", name);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx\\items", name);
+        CreateDirectory(gfxpath, NULL);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx\\items\\collectibles", name);
         CreateDirectory(gfxpath, NULL);
         exit(1);
-    } else if (choice == 3) {
+    } else if (choice == 2) {
         char itempath[150] = " ";
         sprintf(itempath, ".\\%s\\content", name);
         CreateDirectory(itempath, NULL);
@@ -82,7 +84,9 @@ int main() {
         CreateDirectory(gfxpath, NULL);
         sprintf(gfxpath, ".\\%s\\resources\\gfx", name);
         CreateDirectory(gfxpath, NULL);
-        sprintf(gfxpath, ".\\%s\\resources\\gfx\\collectibles", name);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx\\items", name);
+        CreateDirectory(gfxpath, NULL);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx\\items\\collectibles", name);
         CreateDirectory(gfxpath, NULL);
         exit(1);
     } else {
