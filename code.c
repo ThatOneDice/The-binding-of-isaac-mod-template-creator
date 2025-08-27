@@ -76,6 +76,14 @@ int main() {
         items = fopen(itemxmlpath, "w");
         fprintf(items, "<items gfxroot=\"gfx/items/\" version=\"1\">\n\t<active id=\"1\" name=\"name\" gfx=\"gfx.png\" description=\"description\" quality=\"0\" maxcharges=\"1\" chargetype=\"normal\"/>\n</items>");
         printf("Check the items.xml folder in the content folder and edit it to your favor\n Add your asset files in resources\\gfx\\collectibles");
+        
+        char gfxpath[1500] = " ";
+        sprintf(gfxpath, ".\\%s\\resources", name);
+        CreateDirectory(gfxpath, NULL);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx", name);
+        CreateDirectory(gfxpath, NULL);
+        sprintf(gfxpath, ".\\%s\\resources\\gfx\\collectibles", name);
+        CreateDirectory(gfxpath, NULL);
         exit(1);
     } else {
         printf("Invalid choice provided, exiting");
